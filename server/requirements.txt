@@ -1,0 +1,10 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+Flask-SQLAlchemy==3.1.1
+python-dotenv==1.0.0
+Pillow==11.3.0
+skautis-py==1.1.38
+Werkzeug==2.3.7
+gunicorn==21.2.0
+gevent==25.5.1
+flasgger==0.9.7.1
