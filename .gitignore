@@ -2,3 +2,10 @@ __pycache__
 storage
 *.db
 .env
+
+node_modules
+.expo
+android
+ios
+
+
