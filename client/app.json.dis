@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Image Service",
+    "slug": "image-service-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.imageservice"
+    },
+    "android": {
+      "package": "com.yourcompany.imageservice",
+      "navigationBar": {
+        "visible": "leanback"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you upload images to albums.",
+          "cameraPermission": "The app accesses your camera to let you take photos for upload."
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-navigation-bar",
+        {
+          "position": "relative",
+          "visibility": "hidden"
+        }
+      ]
+    ]
+  }
+}
