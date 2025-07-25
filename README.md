@@ -39,7 +39,8 @@ pnpm install
 pnpm run build
 ```
 
-1.5. Or just download the binary from the releases page.
+>[!NOTE]
+>This is just a internal tool for now so in .env you need to add a api key, msg me for it if you want to build stuff with this project
 
 2. Install the app on your phone:
    - For Android: Use the `apk` file in the `client/build` directory.
