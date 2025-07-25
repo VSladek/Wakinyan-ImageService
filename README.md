@@ -2,8 +2,7 @@
 
 This is a simple image service for my skaut troop. It has a server that handles the storing of the images and a client that allows for a upload of the images.
 
-#!> [!WARNING]
-
+> [!WARNING]
 > This is a work in progress a lot of features are bound to change.
 > The state of this project is just a quick throw together so that we can upload images from our camp.
 
