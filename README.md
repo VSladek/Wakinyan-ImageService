@@ -40,6 +40,8 @@ pnpm install
 pnpm run build
 ```
 
+1.5. Or just download the binary from the releases page.
+
 2. Install the app on your phone:
    - For Android: Use the `apk` file in the `client/build` directory.
    - For iOS: Use the `ipa` file in the `client/build` directory.
