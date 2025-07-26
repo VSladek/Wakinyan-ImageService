@@ -1,6 +1,4 @@
 // app.config.js
-import 'dotenv/config';
-
 // Read the role from an environment variable. Default to 'consumer'.
 const role = process.env.APP_ROLE || 'consumer';
 
@@ -47,6 +45,9 @@ export default {
       role: selectedConfig.role,
       apiKey: selectedConfig.apiKey,
       apiBaseUrl: process.env.API_BASE_URL || 'http://127.0.0.1:8080',
+      eas: {
+        projectId: "3dad4dba-d936-416a-88b5-b75ef2af2941"
+      }
     },
 
     // Common settings for both apps

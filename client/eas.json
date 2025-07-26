@@ -1,0 +1,53 @@
+{
+  "cli": {
+    "version": ">= 9.1.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production-consumer-android": {
+      "distribution": "store",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "APP_ROLE": "consumer"
+      }
+    },
+    "production-consumer-ios": {
+      "distribution": "store",
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "APP_ROLE": "consumer"
+      }
+    },
+    "production-admin-android": {
+      "distribution": "store",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "APP_ROLE": "admin"
+      }
+    },
+    "production-admin-ios": {
+      "distribution": "store",
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "APP_ROLE": "admin"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
