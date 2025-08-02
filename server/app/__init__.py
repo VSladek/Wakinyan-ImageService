@@ -1,5 +1,5 @@
 from flasgger import Swagger
-from flask import Flask
+from flask import Flask, redirect, request
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -46,6 +46,18 @@ def create_app() -> Flask:
             }
         }
     })
+
+    @app.before_request
+    def https_redirect():
+        scheme = request.headers.get('X-Forwarded-Proto')
+        if scheme and scheme == 'https':
+            return
+
+        if request.is_secure:
+            return
+
+        url = request.url.replace('http://', 'https://', 1)
+        return redirect(url, code=301)
 
     db.init_app(app)
     migrate.init_app(app, db)
