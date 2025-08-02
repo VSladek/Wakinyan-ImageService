@@ -47,18 +47,6 @@ def create_app() -> Flask:
         }
     })
 
-    @app.before_request
-    def https_redirect():
-        scheme = request.headers.get('X-Forwarded-Proto')
-        if scheme and scheme == 'https':
-            return
-
-        if request.is_secure:
-            return
-
-        url = request.url.replace('http://', 'https://', 1)
-        return redirect(url, code=301)
-
     db.init_app(app)
     migrate.init_app(app, db)
     with app.app_context():
